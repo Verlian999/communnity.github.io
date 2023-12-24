@@ -328,7 +328,7 @@
     <footer class="footer">
       <div class="footer-text">
         <p>
-          copyright &copy; 2024 Developer by
+          copyright &copy; <span id="copyright-year">2024</span> Developer by
           <a href="https://www.instagram.com/verlian_02/">Verlian</a> | All
           Rights Reserverd.
         </p>
@@ -338,6 +338,7 @@
         <a href="#beranda"><i class="bx bxs-up-arrow-circle"></i></a>
       </div>
     </footer>
+
     <!-- Footer Section End -->
 
     <!-- Scroll Reveal | Animasi Scroll Start -->
@@ -351,5 +352,16 @@
     <!-- Custom JavaScript Start -->
     <script src="script.js"></script>
     <!-- Custom JavaScript End -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var currentYear = new Date().getFullYear();
+        var copyrightElement = document.getElementById("copyright-year");
+
+        if (copyrightElement) {
+          copyrightElement.textContent = currentYear;
+        }
+      });
+    </script>
   </body>
 </html>
